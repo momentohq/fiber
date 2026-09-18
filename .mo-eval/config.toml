@@ -1,0 +1,7 @@
+language = "go"
+# No path here: the order appends the exact test file, and naming a directory alongside it widens
+# collection back out — see gin's config and #4240.
+test_command = "go test"
+repo = "gofiber/fiber"   # this is a fork; its merged pull requests are upstream's
+# Pinned to 1.26 because `go.mod` requires it; the 1.25 image gin uses refuses to build this module.
+worker_image = "golang:1.26-bookworm@sha256:9fdc884aacc3bec89b20ffc69f4bb369c78210e3e4f600387b5128b12c199f81"
